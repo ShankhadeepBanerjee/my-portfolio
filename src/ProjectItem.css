@@ -1,0 +1,46 @@
+.project-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 50px 0;
+}
+
+.project-item > div {
+	flex: 1;
+}
+
+.project-item > :nth-child(1) img {
+	width: 100%;
+	border-radius: 20px;
+	padding: 5px;
+	border: solid 2px var(--second-light);
+	box-shadow: -2px 2px 2px var(--second-light);
+}
+.project-item > :nth-child(2) {
+	font-size: 0.8rem;
+	background: linear-gradient(180deg, #303841cc, #920203ad);
+	backdrop-filter: blur(2px);
+	position: relative;
+	padding: 20px;
+	border-radius: 20px;
+	min-height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.icons {
+	font-size: 1.25rem;
+	margin: 5px 0.5rem;
+}
+
+@media screen and (max-width: 720px) {
+	.project-item > div {
+		width: 100%;
+		flex-basis: 80%;
+	}
+	.project-item > :nth-child(1) img {
+		padding: 0;
+	}
+}

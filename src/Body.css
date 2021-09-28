@@ -1,0 +1,279 @@
+.body {
+	color: var(--second);
+}
+
+/* Special componenets  */
+.action-btn {
+	background: #fff0;
+	box-shadow: -2px 2px 5px black;
+	color: var(--second);
+	padding: min(2vw, 10px);
+	border-radius: 15px;
+	border: solid 2px white;
+	margin: 10px 0;
+	width: 150px;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.action-btn:hover {
+	background: var(--second);
+	color: var(--first);
+}
+
+/* This is Banner section  */
+.banner {
+	height: 99vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 200px 0;
+	padding: 0 2vw;
+	background: radial-gradient(
+		ellipse at left,
+		rgba(255, 255, 255, 0.185),
+		transparent
+	);
+}
+
+.banner > :nth-child(1) {
+	height: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.banner-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: var(--second);
+}
+.banner-text p {
+	font-size: 1.5rem;
+}
+.banner-text h1 {
+	font-size: 2.5rem;
+}
+
+/* This is the call for action Scroll-down animation */
+.banner .scroll-down-btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--second);
+	width: fit-content;
+	cursor: pointer;
+	margin: auto;
+}
+.scroll-down-btn > * {
+	text-shadow: 0 0 3px var(--second);
+	animation: nav-scroll-down 3s linear 0s infinite forwards;
+}
+
+.scroll-down-btn > :nth-child(1) {
+	position: relative;
+	top: 10px;
+}
+.scroll-down-btn > :nth-child(2) {
+	opacity: 0.8;
+}
+.scroll-down-btn > :nth-child(3) {
+	position: relative;
+	top: -10px;
+	opacity: 0.6;
+}
+
+/* This is "About" section  */
+.about {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 5vw;
+}
+
+.about-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	color: var(--second);
+	text-align: right;
+}
+
+/* This is "Skills" Section  */
+.skills {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 200px 20px;
+	height: 50vh;
+	background: radial-gradient(
+		ellipse,
+		rgba(255, 255, 255, 0.13),
+		transparent
+	);
+}
+.skills > :nth-child(2) {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	color: var(--second);
+}
+.skills > :nth-child(2) > * {
+	margin: 20px min(50px, 2vw);
+	text-align: center;
+	transition: transform cubic-bezier(0.86, -0.77, 1, 1) 300ms;
+}
+.skills > :nth-child(2) > div:hover {
+	transform: translateY(-25px);
+}
+
+/* text is only shown when element is hovered */
+.skills > :nth-child(2) > div h3 {
+	visibility: hidden;
+}
+.skills > :nth-child(2) > div:hover h3 {
+	visibility: visible;
+}
+
+/* This is projects section  */
+/* For indevidual project item style Go to "ProjectItem.css"  */
+.projects {
+	padding: 100px 30px;
+}
+.projects > :nth-child(odd) p {
+	left: -50px;
+}
+.projects > :nth-child(even) {
+	flex-direction: row-reverse;
+}
+.projects > :nth-child(even) p {
+	left: 50px;
+}
+
+/* This is Conatact Section  */
+.contact {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	background: url("./Assets/Contact-back.jpg");
+	background-size: cover;
+}
+.contact-back {
+	position: absolute;
+	height: inherit;
+	object-fit: contain;
+	z-index: -1;
+}
+.contact > form > div {
+	width: max(50%, 600px);
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background: #8479793d;
+	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(7px);
+	padding: 10px;
+	border-radius: 20px;
+	position: relative;
+	border: dotted 1px #ffffff9c;
+	box-shadow: 2px 2px 5px black;
+}
+
+.contact > form label {
+	color: var(--second);
+	text-shadow: -2px 2px 5px var(--second), 2px -2px 5px var(--third);
+}
+
+.name-email {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.name-email > span {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.name-email input {
+	height: 30px;
+	border-radius: 10px;
+	width: 90%;
+	outline: none;
+	border: solid 2px rgb(255, 255, 255);
+	padding-left: 5px;
+	background: rgba(214, 98, 98, 0.333);
+	color: #fff;
+	box-shadow: 5px 5px 10px black;
+}
+.name-email input:focus-within {
+	border: solid 2px #fff;
+}
+
+.massage {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.massage textarea {
+	border-radius: 10px;
+	border: solid 2px rgb(255, 255, 255);
+	outline: none;
+	padding: 5px;
+	background: rgba(214, 98, 98, 0.333);
+	color: #fff;
+	overflow: auto;
+	resize: vertical;
+	width: calc(100% - 20px);
+	max-height: 300px;
+	box-shadow: 5px 5px 10px black;
+}
+
+.massage textarea:focus-within {
+	border: solid 2px #fff;
+}
+
+.contact .submit-btn {
+	width: 100px;
+	height: 40px;
+	border-radius: 20px;
+	margin: auto;
+}
+
+.form-group {
+	flex: 1;
+}
+
+@keyframes nav-scroll-down {
+	0% {
+		transform: scaleX(1.5);
+	}
+	50% {
+		transform: translateY(12px) scaleX(1);
+		opacity: 0;
+	}
+	100% {
+		transform: scaleX(1.5);
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.contact > form > div {
+		width: calc(100% - 20px);
+	}
+	.name-email > span {
+		width: 100%;
+	}
+}

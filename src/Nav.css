@@ -1,0 +1,122 @@
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	height: max-content;
+	padding: 5px;
+	transition: all cubic-bezier(0.96, 0.03, 0, 1.01) 300ms;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	background: #3205367a;
+	backdrop-filter: blur(2px);
+}
+
+.nav > * {
+	display: flex;
+	align-items: center;
+}
+
+/* The Logo Section */
+.nav > :nth-child(1) {
+	margin-left: 2.5vw;
+}
+
+.nav > :nth-child(1) > img {
+	height: 8vh;
+}
+
+/* The nav Links section  */
+.nav > :nth-child(2) {
+	margin-right: 5vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav ul > * {
+	display: inline;
+	margin: 25px;
+}
+
+.nav ul a {
+	color: var(--second);
+	text-decoration: none;
+	font-size: max(1.2vw, 1.2rem);
+	font-weight: 600;
+	display: inline-block;
+	transition: all linear 100ms;
+	cursor: pointer;
+}
+
+.nav ul a:hover {
+	transform: scale(1.1);
+	color: var(--second);
+	text-shadow: -2px 0px 3px var(--second-light);
+}
+
+/* The nav button section */
+.nav > :nth-child(3) {
+	display: none;
+}
+
+.nav-btn {
+	cursor: pointer;
+	padding: 0 10px;
+	transition: all linear 150ms;
+	color: var(--second);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Animations  */
+
+.animation-nav-open {
+	height: 100vh !important;
+	width: 100%;
+	background: rgba(161, 36, 36, 0.6);
+	backdrop-filter: blur(2px);
+	z-index: 1;
+	overflow: scroll !important;
+}
+.nav-list > ul {
+	width: 100%;
+}
+
+@media screen and (max-width: 610px) {
+	.nav {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		height: 10vh;
+		overflow: hidden;
+	}
+	.nav > :nth-child(1) {
+		width: 50%;
+	}
+
+	.nav > :nth-child(2) {
+		/* or .nav-list  */
+		order: 3;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.nav > :nth-child(3) {
+		order: 2;
+		width: 30%;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.nav ul > * {
+		display: block;
+		margin: 50px 20px;
+	}
+	.nav ul a {
+		width: 100%;
+	}
+	.nav ul a:hover {
+		transform: scale(1.1) translateX(4vw);
+		transform: scale(1.1) translateX(4vw);
+		background: #0e0e55b8;
+		width: 80%;
+	}
+}
